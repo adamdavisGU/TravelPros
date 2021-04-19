@@ -50,7 +50,37 @@
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </head>
 <body>
-    
-      Sign Up Below
+   
+    <!-- Sign Up Page - Some code borrowed from in class stock selection exercise -->
+    <h2>Sign Up Below</h2> 
+    <div>
+        <p>Name:</p>
+        <input type="text" name="user-name" id="my-name" value="" placeholder="Jon Snow">
+        <p>Email Address:</p>
+        <input type="text" name="user-email" id="my-email" value="" placeholder="Email">
+        <button id="my-btn">Submit</button>
+    </div>
+
+    <!-- Insert function to log name and email address to console-->
+
+    <script type="text/javascript">
+        console.log("Hello, logging the name and email address.")
+        
+        // Identify variables for function //
+
+        var username = document.getElementById("my-name")
+        var email = document.getElementById("my-email")
+        var myButton = document.getElementById("my-btn")
+        
+        function handleClick(){
+           console.log("Name:", username.value) 
+           console.log("Email:", email.value)
+        }
+        handleClick()
+        myButton.addEventListener("click", handleClick, false)
+
+    </script>
+
+
 </body>
 </html>
